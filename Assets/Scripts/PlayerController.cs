@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public float speed;
+
     private Rigidbody rb;
 
 	// Use this for initialization
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 
         if(rb != null)
         {
-            rb.AddForce(movement);
+            rb.AddForce(movement * speed);
         }
     }
 }
